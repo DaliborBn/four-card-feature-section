@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+  --poppins: 'Poppins', sans-serif;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-family: var(--poppins);
+  font-size: 1.5rem;
+  padding: 5rem 2.5rem;
+  background-color: var(--very-light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 31.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  max-width: 31.5rem;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 200;
+  line-height: 3rem;
+}
+h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-top: 2.5%;
+  margin-bottom: 7%;
+  color: var(--very-dark-blue);
+}
+h4 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: var(--grayish-blue);
+}
+.main {
+  max-width: 31.5rem;
+  width: 100%;
+  margin-top: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h5 {
+  font-size: 2rem;
+  color: var(--very-dark-blue);
+  font-weight: 600;
+}
+p {
+  font-size: 1.4rem;
+  color: var(--grayish-blue);
+  margin-top: 2%;
+  margin-bottom: 15%;
+}
+img {
+  width: 21%;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.supervisor, .team-builder, .karma, .calculator {
+  max-width: 31.5rem;
+  width: 100%;
+  height: auto;
+  margin-bottom: 9%;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 10%;
+  box-shadow: 0px 8px 15px hsla(230, 27%, 78%, 0.758);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 0.5rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#overlay-s {
+  background-color: var(--cyan);
+}
+#overlay-tb {
+  background-color: var(--red);
+}
+#overlay-k {
+  background-color: var(--orange);
+}
+#overlay-c {
+  background-color: var(--blue);
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    max-width: 111rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header {
+    max-width: none;
+    width: 100%;
+    padding: 0 25%;
+  }
+  h2 {
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+  }
+  h3 {
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+    margin-top: 1.5%;
+    margin-bottom: 3.5%;
+  }
+  .supervisor {
+    grid-area: supervisor;
+  }
+  .team-builder {
+    grid-area: builder;
+  }
+  .karma {
+    grid-area: karma;
+  }
+  .calculator {
+    grid-area: calculator;
+  }
+  .main {
+    max-width: 111rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    display: grid;
+    gap: 3.5rem;
+    grid-template-areas: 
+    '. builder .'
+    'supervisor builder calculator'
+    'supervisor karma calculator'
+    '. karma .';
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    margin-top: 6%;
+
+  }
+  h5 {
+    font-size: 2rem;
+    color: var(--very-dark-blue);
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.4rem;
+    color: var(--grayish-blue);
+  }
+  img {
+    width: 23%;
+  }
+  .supervisor, .team-builder, .karma, .calculator {
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+}
