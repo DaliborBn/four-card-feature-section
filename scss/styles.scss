@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'mixins';
+@import 'utility';
+
+
+.container {
+  @include flexCenter(column);
+  width: 100%;
+  padding: 4.5rem 3rem;
+  border: 3px solid black;
+}
+
+.header {
+  @include flexCenter(column);
+  width: 100%;
+  max-width: 48rem;
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 3rem;
+  }
+  h1 {
+    font-size: 2.4rem;
+    color: $dark-blue;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    color: $grayish-blue;
+    font-weight: 400;
+    line-height: 2.6rem;
+  }
+}
+
+.main-section {
+  @include flexCenter(column);
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.supervisor {
+  @include card-content($cyan);
+}
+.team-builder {
+  @include card-content($red);
+}
+.karma {
+  @include card-content($orange);
+}
+.calculator {
+  @include card-content($blue);
+  margin-bottom: 0;
+}
+

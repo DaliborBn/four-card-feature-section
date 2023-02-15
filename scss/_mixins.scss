@@ -1,0 +1,46 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-content($color) {
+  width: 100%;
+  max-width: 31rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: $card-shadow;
+
+  h5 {
+    font-size: 2rem;
+    color: $dark-blue;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.4rem;
+    color: $grayish-blue;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+  }
+  img {
+    width: 20%;
+    margin-top: auto;
+    align-self: flex-end;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    background: $color;
+    top: 0;
+    left: 0;
+  }
+}
